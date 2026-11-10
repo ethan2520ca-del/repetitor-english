@@ -359,6 +359,10 @@
     .fin__tel { font-size: var(--v-t-lg); }
     .foot span:last-child { display: none; }
   }
+
+  /* Шапка закреплена (position: fixed), поэтому содержимое обложки опускаем под неё:
+     иначе плашка «Демо для …» и аватар уходят под шапку. */
+  #top [data-v-stage] { padding-top: clamp(4.5rem, 7vh, 6rem); }
 </style>
 </head>
 <body>
