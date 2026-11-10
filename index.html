@@ -365,6 +365,17 @@
      заезжает под шапку. Опускаем саму область центрирования на высоту шапки. */
   .hero__copy,
   .hero__turn { top: clamp(4.2rem, 6.4vh, 4.6rem); }
+
+  /* Невысокие окна: чуть уменьшаем обложку, чтобы и плашка была под шапкой,
+     и кнопка осталась над сгибом. */
+  @media (max-height: 600px) {
+    .hero__copy,
+    .hero__turn { top: 3.6rem; }
+    .hero__copy h1 { font-size: clamp(1.8rem, 1rem + 1.6vw, 2.4rem); }
+    .hero__copy .v-lede { font-size: var(--v-t-sm); }
+    .demo-for { margin-bottom: var(--v-2); }
+    .hero__cta { margin-top: var(--v-4); }
+  }
 </style>
 </head>
 <body>
